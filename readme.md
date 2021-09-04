@@ -17,11 +17,13 @@ obj.rancher.services_include.kernel_headers_system_docker = True
 obj.rancher.services_include.zfs = True
 obj.rancher.services_include.volume_cifs = True
 
-obj.ssh_authorized_keys = [
-  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCg4HkhiEGVFuE/IY6VpLWlP7ARvDDOyNip796hIRXCxsi3rQxVrpV+5DssDqM/rwCTz"
-  "/ROEz0a8B3UOfXFmfu4jgSMuBeu08Y/No+iOk7vra9E/NotiSxLHvpzO2BFCNkdfCN9A+kaRyiPxy19QAUVKFukQqrxwotDo4XTb0I/fb"
-  "+T4jNPyqIPlxafnrn9Awu5xn9Z7B+d35FXoaYIxm4pjMg6UPh2iDqBrJ65XF1629e9pgfnWguj"
-  "/l4vNCmXpLrUlJfe3mbqeZT9k1cdu7t4UlJZE2MDFBe46NsUU9C9J5Uxocma7IljTupImhcS5YF8QdHvDabbUlALIZgShRWh"]
+obj.ssh_authorized_keys = \
+  [r"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCg4HkhiEGVFuE/IY6VpLWlP7ARvDDOyNip796hIRXCxsi3r"
+   r"QxVrpV+5DssDqM/rwCTz/ROEz0a8B3UOfXFmfu4jgSMuBeu08Y/No+iOk7vra9E/NotiSxLHvpzO2BFCNkdfC"
+   r"N9A+kaRyiPxy19QAUVKFukQqrxwotDo4XTb0I/fb+T4jNPyqIPlxafnrn9Awu5xn9Z7B+d35FXoaYIxm4pjMg"
+   r"6UPh2iDqBrJ65XF1629e9pgfnWguj/l4vNCmXpLrUlJfe3mbqeZT9k1cdu7t4UlJZE2MDFBe46NsUU9C9J5Uxo"
+   r"cma7IljTupImhcS5YF8QdHvDabbUlALIZgShRWh"]
+
 obj.rancher.state.autoformat = [r"/dev/sda"]
 obj.rancher.network.interfaces = {
   r"eth0": Rancher.Network.Interfaces.eth(),

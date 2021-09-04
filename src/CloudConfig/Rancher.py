@@ -3,7 +3,8 @@ from typing import Optional, List, Dict, Union
 
 from pydantic import PositiveInt, Field, constr
 
-from lib import BaseModel, Type, BaseModelWithRoot
+from CloudConfig.lib.base import BaseModel, BaseModelWithRoot
+from CloudConfig.lib.types import Disk, FS
 
 
 class Rancher(BaseModel):
@@ -12,17 +13,17 @@ class Rancher(BaseModel):
     port: PositiveInt = 22
 
   class State(BaseModel):
-    autoformat: Optional[List[Type.Disk.Device]]
-    boot_dev: Type.Disk.Label = "LABEL=RANCHER_BOOT"
-    boot_fstype: Type.FS = Type.FS.auto
+    autoformat: Optional[List[Disk.Device]]
+    boot_dev: Disk.Label = "LABEL=RANCHER_BOOT"
+    boot_fstype: FS = FS.auto
     cryptsetup: bool = False
-    dev: Type.Disk.Label = "LABEL=RANCHER_STATE"
+    dev: Disk.Label = "LABEL=RANCHER_STATE"
     directory: Optional[str]
-    fstype: Type.FS = Type.FS.auto
+    fstype: FS = FS.auto
     lvm_scan: bool = False
     mdadm_scan: bool = False
-    oem_dev: Type.Disk.Label = "LABEL=RANCHER_OEM"
-    oem_fstype: Type.FS = Type.FS.auto
+    oem_dev: Disk.Label = "LABEL=RANCHER_OEM"
+    oem_fstype: FS = FS.auto
     required: bool = False
     rngd: bool = True
     script: Optional[str]

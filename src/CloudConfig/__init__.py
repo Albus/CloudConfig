@@ -3,11 +3,11 @@ from typing import List, Optional
 
 from CloudConfig.Rancher import Rancher
 from CloudConfig.WriteFiles import WriteFiles
-from lib import BaseModel, BaseConfig
+from CloudConfig.lib.base import BaseModel
 
 
 class Config(BaseModel):
-  class Config(BaseConfig):
+  class Config(BaseModel.Config):
     json_encoders = {
       WindowsPath: lambda v: v.as_posix(),
     }

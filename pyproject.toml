@@ -1,9 +1,14 @@
 [tool.poetry]
 name = "CloudConfig"
-version = "0.1.1"
+version = "0.2.1"
 description = ""
 authors = ["Anton Rastyazhenko <rastyazhenko.anton@gmail.com>"]
-
+repository = "https://github.com/Albus/CloudConfig.git"
+homepage = "https://github.com/Albus/CloudConfig"
+keywords = ["rancheros", "burmillaos", "config", "json", "http"]
+packages = [
+    { include = "CloudConfig", from = "src" },
+]
 [tool.poetry.dependencies]
 python = "^3.8"
 pydantic = "^1.8.2"

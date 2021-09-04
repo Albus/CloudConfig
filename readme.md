@@ -59,3 +59,7 @@ if __name__ == r'__main__':
     run_server()
 
 ```
+
+```shell
+# sudo ros install -d /dev/sda -c http://192.168.0.1:8001 
+```

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "CloudConfig"
-version = "0.2.1"
+version = "0.2.2"
 description = ""
 authors = ["Anton Rastyazhenko <rastyazhenko.anton@gmail.com>"]
 repository = "https://github.com/Albus/CloudConfig.git"
